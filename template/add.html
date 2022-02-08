@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <h1>Add Product page</h1>
+        <h2>{{.}}</h2>
+    </nav>
+    <div>
+        <form action="/adddata" method="post">
+            <table>
+                <td>
+                    <tr><p>ชื่อสินค้า</p></tr>
+                    <tr><input name="name" type="text"></tr>
+                </td>
+                <td>
+                    <tr><p>ราคาของสินค้า</p></tr>
+                    <tr><input name="price"  type="text"></tr>
+                </td>
+                <td>
+                    <tr><p>เพศของสินค้า</p></tr>
+                    <tr>
+                        <select name="gender" id="">
+                            <option value="male">ชาย</option>
+                            <option value="female">หญิง</option>
+                        </select>
+                    </tr>
+                </td>
+                <td>
+                    <tr><p>ไซซ์ของสินค้า</p></tr>
+                    <tr>
+                        <select name="size" id="">
+                            <option value="xs">ไซซ์ XS</option>
+                            <option value="s">ไซซ์ S</option>
+                            <option value="m">ไซซ์ M</option>
+                            <option value="l">ไซซ์ L</option>
+                            <option value="xl">ไซซ์ XL</option>
+                        </select>
+                    </tr>
+                </td>
+                <td>
+                    <tr><p>สีของสินค้า</p></tr>
+                    <tr>
+                        <select name="color" id="">
+                            <option value="red">สีแดง</option>
+                            <option value="black">สีดำ</option>
+                            <option value="white">สีขาว</option>
+                            <option value="yellow">สีเหลือง</option>
+                            <option value="blue">สีน้ำเงิน</option>
+                            <option value="green">สีเขียว</option>
+                        </select>
+                    </tr>
+                </td>
+                <td>
+                    <tr><p>ลายของสินค้า</p></tr>
+                    <tr>
+                        <select name="pattern" id="">
+                            <option value="pat1">ลายที่ 1</option>
+                            <option value="pat2">ลายที่ 2</option>
+                            <option value="pat3">ลายที่ 3</option>
+                            <option value="pat4">ลายที่ 4</option>
+                            <option value="pat5">ลายที่ 5</option>
+                        </select>
+                    </tr>
+                </td>
+            </table>
+            <div>
+                <input type="submit" value="เพิ่มสินค้า">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

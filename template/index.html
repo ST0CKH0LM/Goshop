@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fix p {
+            margin:0px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1 align="center"> Welcome to GoShop</h1>
+    </nav>
+    <div style="padding-left: 200px;">
+        <form action="/showdata">
+            <input type="submit" value="โชว์ข้อมูล">
+        </form>
+        <form action="/adddata">
+            <input type="submit" value="ใส่ข้อมูล">
+        </form>
+        <form action="/sortshow" method="post">
+            <select name="showonly" id="">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+            </select>
+            <input type="submit" value="Sort">
+        </form>
+    </div>
+    <div style="padding-left: 200px;">
+        <div>
+            <p>สินค้า</p>
+            {{ range .}}
+            <div class="fix">
+                <p>ID : {{.Id}} สินค้า : {{.Name}}</p>
+                <p>เพศ : {{.Gen}} สี : {{.Col}} </p>
+                <p>ลายสินค้า : {{.Patt}} ไซซ์ : {{.Size}} ราคา : {{.Price}} </p>
+                <p>======================================================</p>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</body>
+</html>
